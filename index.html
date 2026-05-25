@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprilia Makeup Artist</title>
+  <meta name="description" content="Jasa makeup profesional untuk wisuda, pesta, engagement, dan wedding di wilayah Klaten, Kulon Progo, Jogja dan sekitarnya.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    
+    body { font-family: 'Montserrat', sans-serif; background-color: #fdfaf6; color: #333; margin: 0; padding: 0; overflow-x: hidden; }
+    
+    .header-pink { background-color: #f8c8d1; padding: 25px 0; text-align: center; }
+    .header-pink h1 { margin: 0; font-size: 1.8rem; font-weight: 700; color: #333; }
+
+    nav { display: flex; justify-content: space-around; padding: 15px 0; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+    nav a { text-decoration: none; color: #7a1b1b; font-weight: 700; font-size: 0.85rem; }
+
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    h3 { color: #b05028; font-size: 1.7rem; margin-top: 35px; margin-bottom: 15px; text-align: center; }
+    .hero-text { color: rgba(0,0,0,0.2); font-size: 2.2rem; line-height: 1.2; font-weight: 700; margin-bottom: 30px; text-align: left; }
+
+    /* SLIDER PORTFOLIO */
+    .ba-container { position: relative; width: 100%; height: 450px; border-radius: 12px; overflow: hidden; margin-bottom: 35px; border: 1px solid #ddd; touch-action: pan-y; }
+    .img-ba { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 15%; pointer-events: none; }
+    
+    .before, .slider-button { position: absolute; transition: width 0.05s ease-out, left 0.05s ease-out; }
+    .before { top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 15%; pointer-events: none; z-index: 2; width: 50%; border-right: 3px solid #d4af37; }
+    
+    .slider-button { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 42px; height: 42px; background: #d4af37; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 4; pointer-events: none; }
+    .slider-button::after { content: '◂ ▸'; color: white; font-weight: bold; }
+    .slider-input { -webkit-appearance: none; appearance: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 5; outline: none; margin: 0; cursor: pointer; }
+    .slider-input::-webkit-slider-thumb { -webkit-appearance: none; width: 80px; height: 450px; background: transparent; }
+
+    .zoom-btn { position: absolute; top: 15px; right: 15px; width: 45px; height: 45px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; z-index: 10; cursor: pointer; box-shadow: 0 3px 8px rgba(0,0,0,0.3); }
+
+    /* TOMBOL MUSIK */
+    .music-btn { position: fixed; bottom: 20px; left: 20px; width: 52px; height: 52px; background: #111; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; z-index: 9000; cursor: pointer; border: 2px solid #b05028; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+    .playing { animation: spin 4s linear infinite; }
+    .paused { opacity: 0.6; }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+
+    /* LAYANAN STYLE BARU */
+    .service-category { margin-top: 20px; background: #fff; padding: 20px; border-radius: 12px; border: 1px solid #f1f1f1; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
+    .service-category h4 { color: #7a1b1b; margin-top: 0; border-bottom: 2px solid #f8c8d1; display: inline-block; padding-bottom: 5px; }
+    .list-layanan p { font-weight: 500; margin: 10px 0; font-size: 1rem; color: #444; text-align: left; position: relative; padding-left: 20px; }
+    .list-layanan p::before { content: '✦'; position: absolute; left: 0; color: #d4af37; }
+    
+    /* KONTAK & SOSMED */
+    .wa-btn { display: block; background: #b05028; color: white; text-align: center; padding: 20px; border-radius: 12px; text-decoration: none; font-weight: bold; margin: 30px 0; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(176,80,40,0.3); }
+    .ig-text { text-align: center; margin-top: 20px; font-size: 1.1rem; }
+    .ig-link { color: #b05028; font-weight: bold; text-decoration: underline; }
+
+    .footer-pink { background-color: #f8c8d1; text-align: center; padding: 30px 20px; font-size: 0.9rem; font-weight: 500; margin-top: 50px; line-height: 1.6; }
+
+    /* LIGHTBOX */
+    .lightbox { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); }
+    .lightbox-content { display: block; width: 100vw; max-width: 600px; margin: 80px auto 0 auto; }
+    .lightbox-close { position: fixed; top: 20px; right: 20px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <audio id="bg-music" loop>
+    <source src="https://www.dropbox.com/scl/fi/e72x1a0xb4ujvhv23u3h2/celin-dion-that-s-the-way-is-mp3pm_foTfBeGp.mp3?rlkey=2awmdznio0v5v0zng9m4mrzts&st=icheosqe&raw=1" type="audio/mpeg">
+  </audio>
+
+  <div id="music-btn" class="music-btn paused" onclick="toggleMusic()">🎵</div>
+
+  <div class="header-pink">
+    <h1>Aprilia Makeup Artist</h1>
+  </div>
+  
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#portfolio">Portofolio</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <div class="hero-text">Makeup Profesional di Klaten, Kulon Progo, Jogja & Sekitarnya</div>
+
+    <div id="tentang">
+      <h3>Tentang Kami</h3>
+      <p>Aprilia Makeup Artist adalah jasa makeup profesional yang berdedikasi untuk menciptakan tampilan impian Anda di setiap momen berharga. Kami menggunakan teknik dan produk terbaik untuk hasil yang natural, elegan, dan tahan lama.</p>
+    </div>
+
+    <div id="portfolio">
+      <h3>Portofolio</h3>
+      <p style="font-size: 0.8rem; color: #777; font-style: italic; margin-bottom: 20px; text-align: center;">*Geser panah kuning untuk melihat hasil before-after. Klik ikon 🔍 untuk memperbesar hasil makeup.</p>
+      
+      <div class="ba-container">
+        <div class="zoom-btn" onclick="openZoom(this)">🔍</div>
+        <img src="https://i0.wp.com/i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg" class="img-ba after">
+        <img src="https://i0.wp.com/i.postimg.cc/4dL2sgZf/IMG-20260430-WA0002.jpg" class="img-ba before">
+        <div class="slider-button"></div>
+        <input type="range" min="0" max="100" value="50" class="slider-input" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
+      </div>
+
+      <div class="ba-container">
+        <div class="zoom-btn" onclick="openZoom(this)">🔍</div>
+        <img src="https://i0.wp.com/i.postimg.cc/vTCPxtcX/IMG-20260430-WA0015.jpg" class="img-ba after">
+        <img src="https://i0.wp.com/i.postimg.cc/tJ8rnNYk/IMG-20260430-WA0012.jpg" class="img-ba before">
+        <div class="slider-button"></div>
+        <input type="range" min="0" max="100" value="50" class="slider-input" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
+      </div>
+
+      <div class="ba-container">
+        <div class="zoom-btn" onclick="openZoom(this)">🔍</div>
+        <img src="https://i0.wp.com/i.postimg.cc/BbRhPBXB/IMG-20260430-WA0016.jpg" class="img-ba after">
+        <img src="https://i0.wp.com/i.postimg.cc/cCPDtBrc/IMG-20260430-WA0018.jpg" class="img-ba before">
+        <div class="slider-button"></div>
+        <input type="range" min="0" max="100" value="50" class="slider-input" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
+      </div>
+
+      <div class="ba-container">
+        <div class="zoom-btn" onclick="openZoom(this)">🔍</div>
+        <img src="https://i0.wp.com/i.postimg.cc/hvNCQ1fy/IMG-20260430-WA0024.jpg" class="img-ba after">
+        <img src="https://i0.wp.com/i.postimg.cc/NFZN2k5p/IMG-20260430-WA0022.jpg" class="img-ba before">
+        <div class="slider-button"></div>
+        <input type="range" min="0" max="100" value="50" class="slider-input" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
+      </div>
+    </div>
+
+    <div id="layanan">
+      <h3>Layanan Kami</h3>
+      
+      <div class="service-category">
+        <h4>Professional Look</h4>
+        <div class="list-layanan">
+          <p>Makeup Regular / Party</p>
+          <p>Wisuda & Yearbook</p>
+          <p>Engagement / Lamaran</p>
+          <p>Prewedding Package</p>
+        </div>
+      </div>
+
+      <div class="service-category" style="margin-top:15px;">
+        <h4>Wedding & Family</h4>
+        <div class="list-layanan">
+          <p>Among Tamu / Bridesmaid</p>
+          <p>Ibu & Besan Manten</p>
+          <p>Makeup Anak</p>
+        </div>
+      </div>
+      
+      <p style="font-style: italic; color: #666; margin-top: 20px; font-size: 0.9rem; text-align: center;">Tersedia paket makeup untuk berbagai acara spesial Anda. Silakan konsultasikan kebutuhan Anda kepada kami.</p>
+    </div>
+
+    <div id="kontak">
+      <h3>Kontak</h3>
+      <a href="https://wa.me/6289637752288" class="wa-btn" target="_blank">Booking Lewat WhatsApp</a>
+      <div class="ig-text">Instagram: <a href="https://www.instagram.com/apriliamakeup77" class="ig-link" target="_blank">@apriliamakeup77</a></div>
+    </div>
+  </div>
+
+  <div class="footer-pink">
+    <strong>Aprilia Makeup Artist</strong><br>
+    Klaten - Kulon Progo - Jogja<br>
+    © 2026 All Rights Reserved
+  </div>
+
+  <div id="lightbox" class="lightbox" onclick="closeZoom()">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('music-btn');
+    let hasStarted = false;
+
+    function startMusic() {
+      if (!hasStarted) {
+        music.play().then(() => {
+          musicBtn.classList.remove('paused');
+          musicBtn.classList.add('playing');
+          hasStarted = true;
+        }).catch(() => {});
+      }
+    }
+
+    document.body.addEventListener('click', startMusic, { once: true });
+
+    function toggleMusic() {
+      hasStarted = true;
+      if (music.paused) {
+        music.play();
+        musicBtn.classList.remove('paused');
+        musicBtn.classList.add('playing');
+      } else {
+        music.pause();
+        musicBtn.classList.remove('playing');
+        musicBtn.classList.add('paused');
+      }
+    }
+
+    function slide(el) {
+      const container = el.parentElement;
+      container.querySelector('.before').style.width = el.value + "%";
+      container.querySelector('.slider-button').style.left = el.value + "%";
+    }
+
+    function openZoom(el) {
+      const src = el.parentElement.querySelector('.after').src;
+      document.getElementById('lightbox').style.display = 'block';
+      document.getElementById('lightbox-img').src = src;
+    }
+    
+    function closeZoom() { document.getElementById('lightbox').style.display = 'none'; }
+  </script>
+</body>
+</html>
