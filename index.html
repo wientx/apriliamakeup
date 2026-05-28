@@ -3,13 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aprilia Makeup Artist</title>
+  <title>Aprilia Make Up Artist</title>
   <meta name="description" content="Jasa makeup profesional untuk wisuda, pesta, engagement, dan wedding di wilayah Klaten, Kulon Progo, Jogja dan sekitarnya.">
+  
+  <!-- Sentuhan Magis: Warna Tema Browser HP -->
+  <meta name="theme-color" content="#f8c8d1">
+
+  <!-- SEO & Open Graph Meta Tags untuk Share Sosmed (Menampilkan Thumbnail saat link dibagikan) -->
+  <meta property="og:title" content="Aprilia Make Up Artist">
+  <meta property="og:description" content="Jasa makeup profesional untuk wisuda, pesta, engagement, dan wedding di wilayah Klaten, Kulon Progo, Jogja dan sekitarnya.">
+  <meta property="og:image" content="https://i0.wp.com/i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon (Ikon Kecil di Tab Browser) -->
+  <link rel="icon" type="image/jpeg" href="https://i0.wp.com/i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     
+    html { scroll-behavior: smooth; }
     body { font-family: 'Montserrat', sans-serif; background-color: #fdfaf6; color: #333; margin: 0; padding: 0; overflow-x: hidden; }
     
+    /* SEMANTIK: header */
     .header-pink { background-color: #f8c8d1; padding: 25px 0; text-align: center; }
     .header-pink h1 { margin: 0; font-size: 1.8rem; font-weight: 700; color: #333; }
 
@@ -17,6 +32,10 @@
     nav a { text-decoration: none; color: #7a1b1b; font-weight: 700; font-size: 0.85rem; }
 
     .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    
+    /* SEMANTIK: section padding & margin */
+    section { margin-bottom: 40px; }
+    
     h3 { color: #b05028; font-size: 1.7rem; margin-top: 35px; margin-bottom: 15px; text-align: center; }
     .hero-text { color: rgba(0,0,0,0.2); font-size: 2.2rem; line-height: 1.2; font-weight: 700; margin-bottom: 30px; text-align: left; }
 
@@ -32,10 +51,10 @@
     .slider-input { -webkit-appearance: none; appearance: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 5; outline: none; margin: 0; cursor: pointer; }
     .slider-input::-webkit-slider-thumb { -webkit-appearance: none; width: 80px; height: 450px; background: transparent; }
 
-    .zoom-btn { position: absolute; top: 15px; right: 15px; width: 45px; height: 45px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; z-index: 10; cursor: pointer; box-shadow: 0 3px 8px rgba(0,0,0,0.3); }
+    /* AKSESIBILITAS: Reset button style untuk tombol interaktif */
+    .zoom-btn { position: absolute; top: 15px; right: 15px; width: 45px; height: 45px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; z-index: 10; cursor: pointer; box-shadow: 0 3px 8px rgba(0,0,0,0.3); border: none; padding: 0; outline: none; }
 
-    /* TOMBOL MUSIK */
-    .music-btn { position: fixed; bottom: 20px; left: 20px; width: 52px; height: 52px; background: #111; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; z-index: 9000; cursor: pointer; border: 2px solid #b05028; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+    .music-btn { position: fixed; bottom: 20px; left: 20px; width: 52px; height: 52px; background: #111; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; z-index: 9000; cursor: pointer; border: 2px solid #b05028; box-shadow: 0 4px 12px rgba(0,0,0,0.5); padding: 0; outline: none; }
     .playing { animation: spin 4s linear infinite; }
     .paused { opacity: 0.6; }
     @keyframes spin { 100% { transform: rotate(360deg); } }
@@ -51,85 +70,95 @@
     .ig-text { text-align: center; margin-top: 20px; font-size: 1.1rem; }
     .ig-link { color: #b05028; font-weight: bold; text-decoration: underline; }
 
+    /* SEMANTIK: footer */
     .footer-pink { background-color: #f8c8d1; text-align: center; padding: 30px 20px; font-size: 0.9rem; font-weight: 500; margin-top: 50px; line-height: 1.6; }
 
     /* LIGHTBOX */
     .lightbox { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); }
     .lightbox-content { display: block; width: 100vw; max-width: 600px; margin: 80px auto 0 auto; }
-    .lightbox-close { position: fixed; top: 20px; right: 20px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; }
+    .lightbox-close { position: fixed; top: 20px; right: 20px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; border: none; background: none; }
   </style>
 </head>
 <body>
 
-  <audio id="bg-music" loop>
+  <audio id="bg-music" loop preload="auto">
     <source src="https://www.dropbox.com/scl/fi/e72x1a0xb4ujvhv23u3h2/celin-dion-that-s-the-way-is-mp3pm_foTfBeGp.mp3?rlkey=2awmdznio0v5v0zng9m4mrzts&st=icheosqe&raw=1" type="audio/mpeg">
   </audio>
 
-  <div id="music-btn" class="music-btn paused" onclick="toggleMusic()">🎵</div>
+  <!-- AKSESIBILITAS: Tag diubah menjadi <button> & ditambah aria-label -->
+  <button id="music-btn" class="music-btn paused" onclick="toggleMusic()" aria-label="Putar atau jeda musik latar">🎵</button>
 
-  <div class="header-pink">
-    <h1>Aprilia Makeup Artist</h1>
-  </div>
+  <!-- SEMANTIK: Tag header -->
+  <header class="header-pink">
+    <h1>Aprilia Make Up Artist</h1>
+  </header>
   
-  <nav>
+  <nav aria-label="Navigasi Utama">
     <a href="#tentang">Tentang</a>
     <a href="#portfolio">Portofolio</a>
     <a href="#layanan">Layanan</a>
     <a href="#kontak">Kontak</a>
   </nav>
 
-  <div class="container">
+  <!-- SEMANTIK: Mengelompokkan isi dalam <main> dan <section> -->
+  <main class="container">
     <div class="hero-text">Makeup Profesional di Klaten, Kulon Progo, Jogja & Sekitarnya</div>
 
-    <div id="tentang">
+    <section id="tentang">
       <h3>Tentang Kami</h3>
-      <p>Aprilia Makeup Artist adalah jasa makeup profesional yang berdedikasi untuk menciptakan tampilan impian Anda di setiap momen berharga. Kami menggunakan teknik dan produk terbaik untuk hasil yang natural, elegan, dan tahan lama.</p>
-    </div>
+      <p>Aprilia Make Up Artist adalah jasa makeup profesional yang berdedikasi untuk menciptakan tampilan impian Anda di setiap momen berharga. Kami menggunakan teknik dan produk terbaik untuk hasil yang natural, elegan, dan tahan lama.</p>
+    </section>
 
-    <div id="portfolio">
+    <section id="portfolio">
       <h3>Portofolio</h3>
       <p style="font-size: 0.8rem; color: #777; font-style: italic; margin-bottom: 20px; text-align: center;">*Geser panah kuning untuk melihat hasil before-after. Klik ikon 🔍 untuk memperbesar hasil makeup.</p>
       
+      <!-- ITEM 1 -->
       <div class="ba-container">
-        <div class="zoom-btn" onclick="openZoom(this)">🔍</div>
-        <img src="https://i0.wp.com/i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg" class="img-ba after">
-        <img src="https://i0.wp.com/i.postimg.cc/4dL2sgZf/IMG-20260430-WA0002.jpg" class="img-ba before">
-        <div class="slider-button"></div>
-        <input type="range" min="0" max="100" value="50" class="slider-input" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
+        <!-- AKSESIBILITAS: Tag diubah menjadi <button> -->
+        <button class="zoom-btn" onclick="openZoom(this)" aria-label="Perbesar gambar portofolio 1">🔍</button>
+        <img src="https://i0.wp.com/i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg" class="img-ba after" alt="Hasil makeup after Aprilia MUA">
+        <img src="https://i0.wp.com/i.postimg.cc/4dL2sgZf/IMG-20260430-WA0002.jpg" class="img-ba before" alt="Wajah before makeup Aprilia MUA">
+        <div class="slider-button" aria-hidden="true"></div>
+        <!-- AKSESIBILITAS: Tambahan aria-label -->
+        <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Geser untuk membandingkan before dan after makeup 1" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
       </div>
 
+      <!-- ITEM 2 -->
       <div class="ba-container">
-        <div class="zoom-btn" onclick="openZoom(this)">🔍</div>
-        <img src="https://i0.wp.com/i.postimg.cc/vTCPxtcX/IMG-20260430-WA0015.jpg" class="img-ba after">
-        <img src="https://i0.wp.com/i.postimg.cc/tJ8rnNYk/IMG-20260430-WA0012.jpg" class="img-ba before">
-        <div class="slider-button"></div>
-        <input type="range" min="0" max="100" value="50" class="slider-input" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
+        <button class="zoom-btn" onclick="openZoom(this)" aria-label="Perbesar gambar portofolio 2">🔍</button>
+        <img src="https://i0.wp.com/i.postimg.cc/vTCPxtcX/IMG-20260430-WA0015.jpg" class="img-ba after" alt="Hasil makeup after flawless Aprilia MUA">
+        <img src="https://i0.wp.com/i.postimg.cc/tJ8rnNYk/IMG-20260430-WA0012.jpg" class="img-ba before" alt="Wajah before makeup flawless Aprilia MUA">
+        <div class="slider-button" aria-hidden="true"></div>
+        <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Geser untuk membandingkan before dan after makeup 2" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
       </div>
 
+      <!-- ITEM 3 -->
       <div class="ba-container">
-        <div class="zoom-btn" onclick="openZoom(this)">🔍</div>
-        <img src="https://i0.wp.com/i.postimg.cc/BbRhPBXB/IMG-20260430-WA0016.jpg" class="img-ba after">
-        <img src="https://i0.wp.com/i.postimg.cc/cCPDtBrc/IMG-20260430-WA0018.jpg" class="img-ba before">
-        <div class="slider-button"></div>
-        <input type="range" min="0" max="100" value="50" class="slider-input" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
+        <button class="zoom-btn" onclick="openZoom(this)" aria-label="Perbesar gambar portofolio 3">🔍</button>
+        <img src="https://i0.wp.com/i.postimg.cc/BbRhPBXB/IMG-20260430-WA0016.jpg" class="img-ba after" alt="Hasil makeup after elegan Aprilia MUA">
+        <img src="https://i0.wp.com/i.postimg.cc/cCPDtBrc/IMG-20260430-WA0018.jpg" class="img-ba before" alt="Wajah before makeup elegan Aprilia MUA">
+        <div class="slider-button" aria-hidden="true"></div>
+        <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Geser untuk membandingkan before dan after makeup 3" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
       </div>
 
+      <!-- ITEM 4 -->
       <div class="ba-container">
-        <div class="zoom-btn" onclick="openZoom(this)">🔍</div>
-        <img src="https://i0.wp.com/i.postimg.cc/hvNCQ1fy/IMG-20260430-WA0024.jpg" class="img-ba after">
-        <img src="https://i0.wp.com/i.postimg.cc/NFZN2k5p/IMG-20260430-WA0022.jpg" class="img-ba before">
-        <div class="slider-button"></div>
-        <input type="range" min="0" max="100" value="50" class="slider-input" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
+        <button class="zoom-btn" onclick="openZoom(this)" aria-label="Perbesar gambar portofolio 4">🔍</button>
+        <img src="https://i0.wp.com/i.postimg.cc/hvNCQ1fy/IMG-20260430-WA0024.jpg" class="img-ba after" alt="Hasil makeup after natural Aprilia MUA">
+        <img src="https://i0.wp.com/i.postimg.cc/NFZN2k5p/IMG-20260430-WA0022.jpg" class="img-ba before" alt="Wajah before makeup natural Aprilia MUA">
+        <div class="slider-button" aria-hidden="true"></div>
+        <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Geser untuk membandingkan before dan after makeup 4" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
       </div>
-    </div>
+    </section>
 
-    <div id="layanan">
+    <section id="layanan">
       <h3>Layanan Kami</h3>
       
       <div class="service-category">
         <h4>Professional Look</h4>
         <div class="list-layanan">
-          <p>Makeup Regular / Party</p>
+          <p>Make Up Reguler / Party</p>
           <p>Wisuda & Yearbook</p>
           <p>Engagement / Lamaran</p>
           <p>Prewedding Package</p>
@@ -141,30 +170,33 @@
         <div class="list-layanan">
           <p>Akad Intimate</p>
           <p>Among Tamu / Bridesmaid</p>
-          <p>Ibu & Besan Manten</p>
-          <p>Makeup Anak</p>
+          <p>Ibu & Besan Pengantin</p>
+          <p>Makeup Anak & Keluarga</p>
         </div>
       </div>
       
       <p style="font-style: italic; color: #666; margin-top: 20px; font-size: 0.9rem; text-align: center;">Tersedia paket makeup untuk berbagai acara spesial Anda. Silakan konsultasikan kebutuhan Anda kepada kami.</p>
-    </div>
+    </section>
 
-    <div id="kontak">
+    <section id="kontak">
       <h3>Kontak</h3>
-      <a href="https://wa.me/6289637752288" class="wa-btn" target="_blank">Booking Lewat WhatsApp</a>
-      <div class="ig-text">Instagram: <a href="https://www.instagram.com/apriliamakeup77" class="ig-link" target="_blank">@apriliamakeup77</a></div>
-    </div>
-  </div>
+      <!-- KEAMANAN: Penambahan rel="noopener noreferrer" -->
+      <a href="https://wa.me/6289637752288" class="wa-btn" target="_blank" rel="noopener noreferrer">Booking Lewat WhatsApp</a>
+      <div class="ig-text">Instagram: <a href="https://www.instagram.com/apriliamakeup77" class="ig-link" target="_blank" rel="noopener noreferrer">@apriliamakeup77</a></div>
+    </section>
+  </main>
 
-  <div class="footer-pink">
-    <strong>Aprilia Makeup Artist</strong><br>
+  <!-- SEMANTIK: Tag footer -->
+  <footer class="footer-pink">
+    <strong>Aprilia Make Up Artist</strong><br>
     Klaten - Kulon Progo - Jogja<br>
     © 2026 All Rights Reserved
-  </div>
+  </footer>
 
-  <div id="lightbox" class="lightbox" onclick="closeZoom()">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
+  <div id="lightbox" class="lightbox" onclick="closeZoom()" aria-hidden="true">
+    <!-- AKSESIBILITAS: Tombol close menggunakan <button> -->
+    <button class="lightbox-close" aria-label="Tutup foto diperbesar">&times;</button>
+    <img class="lightbox-content" id="lightbox-img" alt="Perbesar hasil makeup">
   </div>
 
   <script>
@@ -205,11 +237,17 @@
 
     function openZoom(el) {
       const src = el.parentElement.querySelector('.after').src;
-      document.getElementById('lightbox').style.display = 'block';
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.display = 'block';
+      lightbox.setAttribute('aria-hidden', 'false');
       document.getElementById('lightbox-img').src = src;
     }
     
-    function closeZoom() { document.getElementById('lightbox').style.display = 'none'; }
+    function closeZoom() { 
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.display = 'none'; 
+      lightbox.setAttribute('aria-hidden', 'true');
+    }
   </script>
 </body>
 </html>
