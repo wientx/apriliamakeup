@@ -7,33 +7,39 @@
   <meta name="description" content="Jasa makeup profesional untuk Wedding, Akad Intimate, Graduation, dan acara spesial lainnya di wilayah Klaten, Kulon Progo, Jogja dan sekitarnya.">
   <meta name="author" content="Aprilia Make Up Artist">
   
+  <!-- Anti-Sabotase Warna Browser -->
   <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
   <meta name="theme-color" content="#f8c8d1">
 
+  <!-- PWA & Native App Capabilities -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="dns-prefetch" href="https://i.postimg.cc">
+  <!-- DNS Prefetching, Preconnect & Preload LCP -->
   <link rel="dns-prefetch" href="https://dl.dropboxusercontent.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <link rel="preload" as="image" href="https://i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg">
-  <link rel="preload" as="image" href="https://i.postimg.cc/4dL2sgZf/IMG-20260430-WA0002.jpg">
+  <!-- Preload Gambar Lokal Pertama Agar Muncul Instan -->
+  <link rel="preload" as="image" href="foto-after-1.jpg">
+  <link rel="preload" as="image" href="foto-before-1.jpg">
 
+  <!-- Preload Font -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
 
-  <link rel="canonical" href="https://apriliamakeup.com">
+  <!-- SEO & Open Graph Meta Tags (Gunakan link utama github.io untuk OG Image) -->
+  <link rel="canonical" href="https://apriliamua.github.io">
   <meta property="og:title" content="Aprilia Make Up Artist">
   <meta property="og:description" content="Jasa makeup profesional untuk Wedding, Graduation, dan Engagement di wilayah Klaten, Kulon Progo, Jogja dan sekitarnya.">
-  <meta property="og:image" content="https://i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg">
-  <meta property="og:url" content="https://apriliamakeup.com">
+  <meta property="og:image" content="https://apriliamua.github.io/foto-after-1.jpg">
+  <meta property="og:url" content="https://apriliamua.github.io">
   <meta property="og:type" content="website">
 
-  <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg">
+  <!-- Favicon Lokal -->
+  <link rel="icon" type="image/jpeg" href="foto-after-1.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="foto-after-1.jpg">
 
   <style>
     /* CSS Variables & Reset */
@@ -122,6 +128,7 @@
 </head>
 <body>
 
+  <!-- Musik -->
   <audio id="bg-music" loop preload="metadata">
     <source src="https://dl.dropboxusercontent.com/scl/fi/e72x1a0xb4ujvhv23u3h2/celin-dion-that-s-the-way-is-mp3pm_foTfBeGp.mp3?rlkey=2awmdznio0v5v0zng9m4mrzts" type="audio/mpeg">
   </audio>
@@ -151,57 +158,62 @@
       <h3>Portofolio</h3>
       <p style="font-size: 0.85rem; color: #555; font-style: italic; margin-bottom: 20px; text-align: center;">*Geser panah kuning untuk melihat hasil before-after. Klik ikon 🔍 untuk memperbesar hasil makeup.</p>
       
+      <!-- FOTO 1 -->
       <figure class="ba-container">
-        <button class="zoom-btn" onclick="openZoom(this)" data-hd="https://i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg" aria-label="Perbesar gambar portofolio 1" title="Perbesar Foto">🔍</button>
+        <button class="zoom-btn" onclick="openZoom(this)" data-hd="foto-after-1.jpg" aria-label="Perbesar gambar portofolio 1" title="Perbesar Foto">🔍</button>
         <span class="ba-label label-before">Before</span>
         <span class="ba-label label-after">After</span>
-        <img src="https://i.postimg.cc/nrNd9GC7/IMG-20260430-WA0003.jpg" class="img-ba after" alt="Hasil makeup after Aprilia MUA" fetchpriority="high" decoding="sync" draggable="false">
-        <img src="https://i.postimg.cc/4dL2sgZf/IMG-20260430-WA0002.jpg" class="img-ba before" style="width: 50%;" alt="Wajah before makeup Aprilia MUA" fetchpriority="high" decoding="sync" draggable="false">
+        <img src="foto-after-1.jpg" class="img-ba after" alt="Hasil makeup after Aprilia MUA" fetchpriority="high" decoding="sync" draggable="false">
+        <img src="foto-before-1.jpg" class="img-ba before" style="width: 50%;" alt="Wajah before makeup Aprilia MUA" fetchpriority="high" decoding="sync" draggable="false">
         <div class="slider-button" style="left: 50%;" aria-hidden="true"></div>
         <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Geser untuk membandingkan before dan after makeup 1" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
       </figure>
 
+      <!-- FOTO 2 -->
       <figure class="ba-container">
-        <button class="zoom-btn" onclick="openZoom(this)" data-hd="https://i.postimg.cc/vTCPxtcX/IMG-20260430-WA0015.jpg" aria-label="Perbesar gambar portofolio 2" title="Perbesar Foto">🔍</button>
+        <button class="zoom-btn" onclick="openZoom(this)" data-hd="foto-after-2.jpg" aria-label="Perbesar gambar portofolio 2" title="Perbesar Foto">🔍</button>
         <span class="ba-label label-before">Before</span>
         <span class="ba-label label-after">After</span>
-        <img src="https://i.postimg.cc/vTCPxtcX/IMG-20260430-WA0015.jpg" class="img-ba after" alt="Hasil makeup after flawless Aprilia MUA" loading="lazy" decoding="async" draggable="false">
-        <img src="https://i.postimg.cc/tJ8rnNYk/IMG-20260430-WA0012.jpg" class="img-ba before" style="width: 50%;" alt="Wajah before makeup flawless Aprilia MUA" loading="lazy" decoding="async" draggable="false">
+        <img src="foto-after-2.jpg" class="img-ba after" alt="Hasil makeup after flawless Aprilia MUA" loading="lazy" decoding="async" draggable="false">
+        <img src="foto-before-2.jpg" class="img-ba before" style="width: 50%;" alt="Wajah before makeup flawless Aprilia MUA" loading="lazy" decoding="async" draggable="false">
         <div class="slider-button" style="left: 50%;" aria-hidden="true"></div>
         <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Geser untuk membandingkan before dan after makeup 2" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
       </figure>
 
+      <!-- FOTO 3 -->
       <figure class="ba-container">
-        <button class="zoom-btn" onclick="openZoom(this)" data-hd="https://i.postimg.cc/BbRhPBXB/IMG-20260430-WA0016.jpg" aria-label="Perbesar gambar portofolio 3" title="Perbesar Foto">🔍</button>
+        <button class="zoom-btn" onclick="openZoom(this)" data-hd="foto-after-3.jpg" aria-label="Perbesar gambar portofolio 3" title="Perbesar Foto">🔍</button>
         <span class="ba-label label-before">Before</span>
         <span class="ba-label label-after">After</span>
-        <img src="https://i.postimg.cc/BbRhPBXB/IMG-20260430-WA0016.jpg" class="img-ba after" alt="Hasil makeup after elegan Aprilia MUA" loading="lazy" decoding="async" draggable="false">
-        <img src="https://i.postimg.cc/cCPDtBrc/IMG-20260430-WA0018.jpg" class="img-ba before" style="width: 50%;" alt="Wajah before makeup elegan Aprilia MUA" loading="lazy" decoding="async" draggable="false">
+        <img src="foto-after-3.jpg" class="img-ba after" alt="Hasil makeup after elegan Aprilia MUA" loading="lazy" decoding="async" draggable="false">
+        <img src="foto-before-3.jpg" class="img-ba before" style="width: 50%;" alt="Wajah before makeup elegan Aprilia MUA" loading="lazy" decoding="async" draggable="false">
         <div class="slider-button" style="left: 50%;" aria-hidden="true"></div>
         <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Geser untuk membandingkan before dan after makeup 3" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
       </figure>
 
+      <!-- FOTO 4 -->
       <figure class="ba-container">
-        <button class="zoom-btn" onclick="openZoom(this)" data-hd="https://i.postimg.cc/hvNCQ1fy/IMG-20260430-WA0024.jpg" aria-label="Perbesar gambar portofolio 4" title="Perbesar Foto">🔍</button>
+        <button class="zoom-btn" onclick="openZoom(this)" data-hd="foto-after-4.jpg" aria-label="Perbesar gambar portofolio 4" title="Perbesar Foto">🔍</button>
         <span class="ba-label label-before">Before</span>
         <span class="ba-label label-after">After</span>
-        <img src="https://i.postimg.cc/hvNCQ1fy/IMG-20260430-WA0024.jpg" class="img-ba after" alt="Hasil makeup after natural Aprilia MUA" loading="lazy" decoding="async" draggable="false">
-        <img src="https://i.postimg.cc/NFZN2k5p/IMG-20260430-WA0022.jpg" class="img-ba before" style="width: 50%;" alt="Wajah before makeup natural Aprilia MUA" loading="lazy" decoding="async" draggable="false">
+        <img src="foto-after-4.jpg" class="img-ba after" alt="Hasil makeup after natural Aprilia MUA" loading="lazy" decoding="async" draggable="false">
+        <img src="foto-before-4.jpg" class="img-ba before" style="width: 50%;" alt="Wajah before makeup natural Aprilia MUA" loading="lazy" decoding="async" draggable="false">
         <div class="slider-button" style="left: 50%;" aria-hidden="true"></div>
         <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Geser untuk membandingkan before dan after makeup 4" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" oninput="slide(this)" onmousedown="startMusic()" ontouchstart="startMusic()">
       </figure>
     </section>
 
+    <!-- BAGIAN LAYANAN YANG SUDAH DIPERBARUI -->
     <section id="layanan">
       <h3>Layanan Kami</h3>
       
       <div class="service-category">
-        <h4>Professional Look</h4>t</h4>
+        <h4>Professional Look</h4>
         <div class="list-layanan">
-          <p>Make Up Reguler / Party</p>
+          <p>Makeup Regular / Party</p>
+          <p>Wisuda & Yearbook</p>
           <p>Engagement / Lamaran</p>
           <p>Prewedding Package</p>
-          <p>Wisuda & Yearbook</p>
         </div>
       </div>
 
@@ -210,8 +222,8 @@
         <div class="list-layanan">
           <p>Akad Intimate</p>
           <p>Among Tamu / Bridesmaid</p>
-          <p>Make Up Ibu & Besan Pengantin</p>
-          <p>Make Up Anak</p>
+          <p>Ibu & Besan Manten</p>
+          <p>Makeup Anak</p>
         </div>
       </div>
       
@@ -220,7 +232,7 @@
 
     <section id="kontak">
       <h3>Kontak</h3>
-      <a href="https://api.whatsapp.com/send?phone=6289637752288&text=Halo%20Aprilia%20Makeup%2C%20saya%20tertarik%20ingin%20tanya%20dan%20konsultasi%20booking%20jadwal%20makeup%20apakah%20ada%20slot%20kosong%3F" class="wa-btn" target="_blank" rel="noopener noreferrer">Booking Lewat WhatsApp</a>
+      <a href="https://api.whatsapp.com/send?phone=6289637752288&text=Halo%20Aprilia%20Makeup%2C%20saya%20tertarik%20ingin%20tanya%20paket%20dan%20booking%20jadwal%20makeup%20apakah%20ada%20slot%20kosong%3F" class="wa-btn" target="_blank" rel="noopener noreferrer">Booking Lewat WhatsApp</a>
       <div class="ig-text">Instagram: <a href="https://www.instagram.com/apriliamakeup77" class="ig-link" target="_blank" rel="noopener noreferrer">@apriliamakeup77</a></div>
     </section>
   </main>
@@ -231,6 +243,7 @@
     © 2026 All Rights Reserved
   </footer>
 
+  <!-- LIGHTBOX -->
   <div id="lightbox" class="lightbox" onclick="closeZoom()" aria-hidden="true" role="dialog" aria-modal="true">
     <button class="lightbox-close" onclick="closeZoom(); event.stopPropagation();" aria-label="Tutup foto">&times;</button>
     <div class="lightbox-wrapper" id="lightbox-wrapper">
